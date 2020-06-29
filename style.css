@@ -7,6 +7,10 @@
   src: url("fonts/Muli-VariableFont_wght.ttf");
 }
 
+* {
+  margin: 0;
+}
+
 body {
   background: url("./media/webb.png");
   font-family: "Muli";
@@ -21,4 +25,9 @@ header {
 header h1,
 header h3 {
   text-align: center;
+}
+
+#main-doc {
+  display: flex;
+  flex-flow: column wrap;
 }
