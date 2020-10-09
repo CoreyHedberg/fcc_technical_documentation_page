@@ -1,10 +1,12 @@
 /*
     This website was written by Corey Hedberg for the purposes of the Free Code Camp Responsive Web Design Certification "Build a Technical Documentation Page" challenge.
+    corey@coreyhedberg.dev
+    https://coreyhedberg.dev
 */
 
 @font-face {
   font-family: "Muli";
-  src: url("fonts/Muli-VariableFont_wght.ttf");
+  src: url("fonts/Muli.ttf");
 }
 
 * {
@@ -16,15 +18,11 @@ body {
   font-family: "Muli";
 }
 
-header {
+#header {
+  text-align: center;
   margin: 0;
   top: 0;
   border: 1px dashed red;
-}
-
-header h1,
-header h3 {
-  text-align: center;
 }
 
 #main-doc {

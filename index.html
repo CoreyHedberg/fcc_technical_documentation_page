@@ -1,5 +1,7 @@
 <!--
     This website was written by Corey Hedberg for the purposes of the Free Code Camp Responsive Web Design Certification "Build a Technical Documentation Page" challenge.
+    corey@coreyhedberg.dev
+    https://coreyhedberg.dev
 -->
 
 <!DOCTYPE html>
@@ -11,12 +13,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="../technical_documentation_page/style.css"
-      media="all"
-    />
+    <link type="text/css" rel="stylesheet" href="style.css" media="all" />
 
     <script defer src="../technical_documentation_page/script.js"></script>
 
@@ -28,19 +25,30 @@
     Information taken from:
     https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox
   -->
-    <header>
+    <div id="header">
       <h1>CSS Flexbox</h1>
       <h3>Technical Documentation</h3>
-    </header>
+    </div>
 
     <main id="main-doc">
-      <section class="main-section">Why Flexbox?</section>
-      <section class="main-section">Introducing a simple example</section>
-      <section class="main-section">
-        Specifying what elements to lay out as flexible boxes
+      <section class="main-section" id="Why_Flexbox">
+        <header>Why Flexbox?</header>
       </section>
-      <section class="main-section">An aside on the flex model</section>
-      <section class="main-section">Columns or rows?</section>
+      <section class="main-section" id="Introducing_a_simple_example">
+        <header>Introducing a simple example</header>
+      </section>
+      <section
+        class="main-section"
+        id="Specifying_what_elements_to_lay_out_as_flexible_boxes"
+      >
+        <header>Specifying what elements to lay out as flexible boxes</header>
+      </section>
+      <section class="main-section" id="An_aside_on_the_flex_model">
+        <header>An aside on the flex model</header>
+      </section>
+      <section class="main-section" id="Columns_or_rows">
+        <header>Columns or rows?</header>
+      </section>
     </main>
 
     <section id="section1">
