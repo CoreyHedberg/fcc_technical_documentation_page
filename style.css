@@ -33,11 +33,13 @@ body {
 }
 
 .nav-link {
-  padding: 0 0 0.4rem 2rem;
+  padding: 0 0 0.8rem 0.4rem;
   display: inline-block;
   text-decoration: none;
   color: #fff;
   cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .nav-link:hover {
@@ -50,13 +52,13 @@ hr {
 }
 
 #main-doc {
-  /* position: relative; */
+  font-size: 1.4rem;
 }
 
 #sample-flexbox-example {
   border: 1px solid black;
 }
 
-#coded-section {
+code {
   background-color: bisque;
 }
