@@ -17,6 +17,7 @@ body {
 
 #navbar {
   background-color: #00205b;
+  color: #fff;
   position: fixed;
   top: 0px;
   left: 0px;
@@ -26,8 +27,21 @@ body {
   border-color: whitesmoke;
 }
 
-#navbar a {
+#navbar header {
+  font-size: 2.2rem;
+  padding-left: 0.4rem;
+}
+
+.nav-link {
+  padding: 0 0 0.4rem 2rem;
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
   cursor: pointer;
+}
+
+.nav-link:hover {
+  color: yellow;
 }
 
 hr {
