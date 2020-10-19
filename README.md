@@ -10,7 +10,7 @@ Click [here](https://coreyhedberg.github.io/technical_documentation_page/) to vi
 
 ## Summary
 
-<image src="media/readme_screenshot.png">
+<image src="readme_files/readme_screenshot.jpg">
 
 This website was written for the purposes of the Free Code Camp Responsive Web Design Certification "Build a Technical Documentation Page" challenge.
 

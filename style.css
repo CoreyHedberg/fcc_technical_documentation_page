@@ -25,11 +25,9 @@ body {
 
 #navbar {
   background-color: #00205b;
-  /* position: fixed; */
   color: #fff;
   top: 0px;
   left: 0px;
-  /* width: 280px; */
   height: 100%;
   border-right: solid;
   border-color: whitesmoke;
@@ -53,6 +51,11 @@ body {
 
 .nav-link:hover {
   color: yellow;
+}
+
+header {
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 hr {
