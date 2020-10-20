@@ -12,12 +12,11 @@
 body {
   background: url("./media/webb.png");
   font-family: "Muli";
-  line-height: 1.5;
 }
 
 #grid {
   display: grid;
-  grid-template-columns: 15rem auto;
+  grid-template-columns: 20rem auto;
   grid-template-rows: auto;
   gap: 0px 0px;
   grid-template-areas: "left right";
@@ -41,8 +40,8 @@ body {
 
 .nav-link {
   padding: 0 0 0.8rem 0.4rem;
-  display: inline-block;
   text-decoration: none;
+  font-size: 1.5rem;
   color: #fff;
   cursor: pointer;
   display: flex;
@@ -74,4 +73,10 @@ hr {
 
 code {
   background-color: bisque;
+}
+
+@media only screen and (max-width: 800px) {
+  #grid {
+    grid-template-columns: 9rem auto;
+  }
 }
