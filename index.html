@@ -1,3 +1,5 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
 <!--
     This website was written by Corey Hedberg for the purposes of the Free Code Camp Responsive Web Design Certification "Build a Technical Documentation Page" challenge.
     corey@coreyhedberg.dev
@@ -23,104 +25,187 @@
     Information taken from:
     https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox
   -->
-  <div id="grid">
-    <nav id="navbar">
-      <header>CSS Flexbox</header>
-      <a href="#Why_Flexbox" class="nav-link">Why Flexbox</a>
-      <a href="#Introducing_a_simple_example" class="nav-link">Introducing a simple example</a>
-      <a href="#Specifying_what_elements_to_lay_out_as_flexible_boxes" class="nav-link">Specifying what elements to lay out as flexible boxes</a>
-      <a href="#The_flex_model" class="nav-link">The flex model</a>
-      <a href="#Columns_or_rows" class="nav-link">Columns or rows</a>
-    </nav>
+    <div id="grid">
+      <nav id="navbar">
+        <header>CSS Flexbox</header>
+        <a href="#Why_Flexbox" class="nav-link">Why Flexbox</a>
+        <a href="#Introducing_a_simple_example" class="nav-link"
+          >Introducing a simple example</a
+        >
+        <a
+          href="#Specifying_what_elements_to_lay_out_as_flexible_boxes"
+          class="nav-link"
+          >Specifying what elements to lay out as flexible boxes</a
+        >
+        <a href="#The_flex_model" class="nav-link">The flex model</a>
+        <a href="#Columns_or_rows" class="nav-link">Columns or rows</a>
+      </nav>
 
-    <main id="main-doc">
-      <section class="main-section" id="Why_Flexbox">
-        <header>Why Flexbox</header>
-        <p>
-          For a long time, the only reliable cross browser-compatible tools
-          available for creating CSS layouts were things like
-          <code>floats</code> and <code>positioning</code>. These are fine and
-          they work, but in some ways they are also rather limiting and
-          frustrating.
-        </p>
-        <p>
-          The following simple layout requirements are either difficult or
-          impossible to achieve with such tools, in any kind of convenient,
-          flexible way:
-        </p>
-        <ul>
-          <li>Vertically centering a block of content inside its parent.</li>
-          <li>
-            Making all the children of a container take up an equal amount of
-            the available width/height, regardless of how much width/height is
-            available.
-          </li>
-          <li>
-            Making all columns in a multiple column layout adopt the same height
-            even if they contain a different amount of content.
-          </li>
-        </ul>
-        <p>
-          As you'll see in subsequent sections, flexbox makes a lot of layout
-          tasks much easier. Let's dig in!
-        </p>
-      </section>
-      <hr>
-      <section class="main-section" id="Introducing_a_simple_example">
-        <header>Introducing a simple example</header>
-        <p>
-          In this article we are going to get you to work through a series of
-          exercises to help you understand how flexbox works. To get started,
-          you should make a local copy of the first starter file —
-          <code>flexbox0.html</code>
-          from our github repo — load it in a modern browser (like Firefox or
-          Chrome), and have a look at the code in your code editor. You can also
-          see it live here.
-          <p>You'll see that we have a <code>&lt;header&gt;</code> element with a top level heading inside it, and a <code>&lt;section&gt;</code> element containing three <code>&lt;article&gt;</code>s. We are going to use these to create a fairly standard three column layout.</p>
-          <img src="media/flexbox-example1.png" alt="Flexbox Example 1" id="sample-flexbox-example">
-        </p>
-      </section>
-      <hr>
-      <section
-        class="main-section"
-        id="Specifying_what_elements_to_lay_out_as_flexible_boxes"
-      >
-        <header>Specifying what elements to lay out as flexible boxes</header>
-        <p>To start with, we need to select which elements are to be laid out as flexible boxes. To do this, we set a special value of display on the parent element of the elements you want to affect. In this case we want to lay out the <code>&lt;article&gt;</code> elements, so we set this on the <code>&lt;section&gt;</code>:</p>
-        <code id="coded-section">
-        section {
-          display: flex;
-        }
-        </code>
-        <p>This causes the <code>&lt;section&gt;</code> element to become a <strong>flex container</strong>, and its children to become <strong>flex items</strong>. The result of this should be something like so:</p>
-        <img src="media/flexbox-example2.png" alt="Flexbox Example 2" id="sample-flexbox-example">
-        <p>So, this single declaration gives us everything we need — incredible, right? We have our multiple column layout with equal-sized columns, and the columns are all the same height. This is because the default values given to flex items (the children of the flex container) are set up to solve common problems such as this.</p>
-        <p>To be clear, let's reiterate what is happening here. The element we've given a <code>display</code> value of <code>flex</code> to is acting like a block-level element in terms of how it interacts with the rest of the page, but its children are being laid out as flex items. The next section will explain in more detail what this means. Note also that you can use a display value of <code>inline-flex</code> if you wish to lay out an element's children as flex items, but have that element behave like an inline element.</p>
-      </section>
-      <hr>
-      <section class="main-section" id="The_flex_model">
-        <header>The flex model</header>
-        <p>When elements are laid out as flex items, they are laid out along two axes:</p>
-        <img src="media/flex_terms.png" alt="The flex model">
-        <ul>
-          <li>The <strong>main axis</strong> is the axis running in the direction the flex items are being laid out in (e.g. as rows across the page, or columns down the page.) The start and end of this axis are called the <strong>main start</strong> and <strong>main end</strong>.</li>
-          <li>The <strong>cross axis</strong> is the axis running perpendicular to the direction the flex items are being laid out in. The start and end of this axis are called the <strong>cross start</strong> and <strong>cross end</strong>.</li>
-          <li>The parent element that has <code>display: flex</code> set on it (the <code>&lt;section&gt;</code> in our example) is called the <strong>flex container</strong>.</li>
-          <li>The items being laid out as flexible boxes inside the flex container are called <strong>flex items</strong> (the <code>&lt;article&gt;</code> elements in our example).</li>
-        </ul>
-        <p>Bear this terminology in mind as you go through subsequent sections. You can always refer back to it if you get confused about any of the terms being used.</p>
-      </section>
-      <hr>
-      <section class="main-section" id="Columns_or_rows">
-        <header>Columns or rows</header>
-        <p>Flexbox provides a property called <code>flex-direction</code> that specifies what direction the main axis runs in (what direction the flexbox children are laid out in) — by default this is set to <code>row</code>, which causes them to be laid out in a row in the direction your browser's default language works in (left to right, in the case of an English browser).</p>
-        <p>Try adding the following declaration to your <code>&lt;section&gt;</code> rule:</p>
-        <code id="coded-section">
-          flex-direction: column;
-        </code>
-        <p>You'll see that this puts the items back in a column layout, much like they were before we added any CSS. Before you move on, delete this declaration from your example.</p>
-      </section>
-    </main>
-  </div>
+      <main id="main-doc">
+        <section class="main-section" id="Why_Flexbox">
+          <header>Why Flexbox</header>
+          <p>
+            For a long time, the only reliable cross browser-compatible tools
+            available for creating CSS layouts were things like
+            <code>floats</code> and <code>positioning</code>. These are fine and
+            they work, but in some ways they are also rather limiting and
+            frustrating.
+          </p>
+          <p>
+            The following simple layout requirements are either difficult or
+            impossible to achieve with such tools, in any kind of convenient,
+            flexible way:
+          </p>
+          <ul>
+            <li>Vertically centering a block of content inside its parent.</li>
+            <li>
+              Making all the children of a container take up an equal amount of
+              the available width/height, regardless of how much width/height is
+              available.
+            </li>
+            <li>
+              Making all columns in a multiple column layout adopt the same
+              height even if they contain a different amount of content.
+            </li>
+          </ul>
+          <p>
+            As you'll see in subsequent sections, flexbox makes a lot of layout
+            tasks much easier. Let's dig in!
+          </p>
+        </section>
+        <hr />
+        <section class="main-section" id="Introducing_a_simple_example">
+          <header>Introducing a simple example</header>
+          <p>
+            In this article we are going to get you to work through a series of
+            exercises to help you understand how flexbox works. To get started,
+            you should make a local copy of the first starter file —
+            <code>flexbox0.html</code>
+            from our github repo — load it in a modern browser (like Firefox or
+            Chrome), and have a look at the code in your code editor. You can
+            also see it live here.
+          </p>
+
+          <p>
+            You'll see that we have a <code>&lt;header&gt;</code> element with a
+            top level heading inside it, and a
+            <code>&lt;section&gt;</code> element containing three
+            <code>&lt;article&gt;</code>s. We are going to use these to create a
+            fairly standard three column layout.
+          </p>
+          <img
+            src="media/flexbox-example1.png"
+            alt="Flexbox Example 1"
+            id="sample-flexbox-example"
+          />
+        </section>
+        <hr />
+        <section
+          class="main-section"
+          id="Specifying_what_elements_to_lay_out_as_flexible_boxes"
+        >
+          <header>Specifying what elements to lay out as flexible boxes</header>
+          <p>
+            To start with, we need to select which elements are to be laid out
+            as flexible boxes. To do this, we set a special value of display on
+            the parent element of the elements you want to affect. In this case
+            we want to lay out the <code>&lt;article&gt;</code> elements, so we
+            set this on the <code>&lt;section&gt;</code>:
+          </p>
+          <code id="coded-section"> section { display: flex; } </code>
+          <p>
+            This causes the <code>&lt;section&gt;</code> element to become a
+            <strong>flex container</strong>, and its children to become
+            <strong>flex items</strong>. The result of this should be something
+            like so:
+          </p>
+          <img
+            src="media/flexbox-example2.png"
+            alt="Flexbox Example 2"
+            id="sample-flexbox-example"
+          />
+          <p>
+            So, this single declaration gives us everything we need —
+            incredible, right? We have our multiple column layout with
+            equal-sized columns, and the columns are all the same height. This
+            is because the default values given to flex items (the children of
+            the flex container) are set up to solve common problems such as
+            this.
+          </p>
+          <p>
+            To be clear, let's reiterate what is happening here. The element
+            we've given a <code>display</code> value of <code>flex</code> to is
+            acting like a block-level element in terms of how it interacts with
+            the rest of the page, but its children are being laid out as flex
+            items. The next section will explain in more detail what this means.
+            Note also that you can use a display value of
+            <code>inline-flex</code> if you wish to lay out an element's
+            children as flex items, but have that element behave like an inline
+            element.
+          </p>
+        </section>
+        <hr />
+        <section class="main-section" id="The_flex_model">
+          <header>The flex model</header>
+          <p>
+            When elements are laid out as flex items, they are laid out along
+            two axes:
+          </p>
+          <img src="media/flex_terms.png" alt="The flex model" />
+          <ul>
+            <li>
+              The <strong>main axis</strong> is the axis running in the
+              direction the flex items are being laid out in (e.g. as rows
+              across the page, or columns down the page.) The start and end of
+              this axis are called the <strong>main start</strong> and
+              <strong>main end</strong>.
+            </li>
+            <li>
+              The <strong>cross axis</strong> is the axis running perpendicular
+              to the direction the flex items are being laid out in. The start
+              and end of this axis are called the
+              <strong>cross start</strong> and <strong>cross end</strong>.
+            </li>
+            <li>
+              The parent element that has <code>display: flex</code> set on it
+              (the <code>&lt;section&gt;</code> in our example) is called the
+              <strong>flex container</strong>.
+            </li>
+            <li>
+              The items being laid out as flexible boxes inside the flex
+              container are called <strong>flex items</strong> (the
+              <code>&lt;article&gt;</code> elements in our example).
+            </li>
+          </ul>
+          <p>
+            Bear this terminology in mind as you go through subsequent sections.
+            You can always refer back to it if you get confused about any of the
+            terms being used.
+          </p>
+        </section>
+        <hr />
+        <section class="main-section" id="Columns_or_rows">
+          <header>Columns or rows</header>
+          <p>
+            Flexbox provides a property called <code>flex-direction</code> that
+            specifies what direction the main axis runs in (what direction the
+            flexbox children are laid out in) — by default this is set to
+            <code>row</code>, which causes them to be laid out in a row in the
+            direction your browser's default language works in (left to right,
+            in the case of an English browser).
+          </p>
+          <p>
+            Try adding the following declaration to your
+            <code>&lt;section&gt;</code> rule:
+          </p>
+          <code id="coded-section"> flex-direction: column; </code>
+          <p>
+            You'll see that this puts the items back in a column layout, much
+            like they were before we added any CSS. Before you move on, delete
+            this declaration from your example.
+          </p>
+        </section>
+      </main>
+    </div>
   </body>
 </html>
