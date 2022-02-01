@@ -16,10 +16,10 @@ I really focused on my CSS styling with this project. I also wrote my first CSS 
 
 ## About Project
 
-<image src="readme_files/free_code_camp_logo.png" width="38" alt="www.freecodecamp.org"><br>
-This project was completed for the "Build A Technical Documentation Page" challenge of the Free Code Camp Responsive Web Design certification.<br>
+[<image src="readme_files/free_code_camp_logo.png" width="38" alt="www.freecodecamp.org">](https://www.freecodecamp.org)<br>
+This project was completed for the **Build A Technical Documentation Page** challenge of the Free Code Camp Responsive Web Design certification.<br>
 
-## Completed By
+## Author
 
 **Corey Hedberg** | _Software Developer_ <br>
 [Website](https://coreyhedberg.dev) &bull; [LinkedIn](https://www.linkedin.com/in/coreyhedberg/)
